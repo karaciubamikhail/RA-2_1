@@ -15,10 +15,12 @@ export class Portfolio extends Component{
     render(){
         return(
             <div className="container">
-                <div class='btns'>
+                <div className='btns'>
                     <Toolbar filters={["All", "Websites", "Flayers", "Business Cards"]} onSelectFilter={this.onSelectFilter} selected={this.state.activeFilter}/>
                 </div>
-                <ProjectList selected={this.state.activeFilter} data={data}/>
+                <div className='project-list'>
+                    <ProjectList selected={this.state.activeFilter} data={data}/>
+                </div>
             </div>
         )
     }
